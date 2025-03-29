@@ -1,5 +1,5 @@
 # spec/calculator_spec.rb
-require 'calculator'
+require 'calcultor'
 
 RSpec.describe 'Calculator' do
   it 'returns 0 for an empty string' do
