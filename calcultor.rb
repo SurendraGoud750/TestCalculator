@@ -11,5 +11,10 @@ def add(numbers)
 
   numbers = numbers.gsub("\n", delimiter)
   number_array = numbers.split(delimiter)
-  number_array.map(&:to_i).sum
+  numbers = number_array.map(&:to_i)
+
+  negative_numbers = numbers.select { |n| n < 0 }
+  raise "Negative numbers not allowed: #{negative_numbers.join(', ')}" unless negative_numbers.empty?
+  
+  numbers.sum
 end
